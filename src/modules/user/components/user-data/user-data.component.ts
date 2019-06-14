@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Optional } from '@angular/core';
 import { UserInterface } from '../../../../interfaces';
 import { UserComponent } from '../user/user.component';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-user-data',
@@ -16,6 +17,8 @@ export class UserDataComponent implements OnInit {
   ngOnInit() {
     console.log(this.parent);
     this.parent.user = { ...this.user };
+
   }
+
 
 }
